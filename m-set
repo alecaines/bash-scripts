@@ -1,0 +1,3 @@
+#!/usr/bin/bash
+f=$1
+sudo setfacl -m 'u::rwx' $f

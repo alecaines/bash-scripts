@@ -1,0 +1,4 @@
+#!/usr/bin/bash
+
+cwd=$(pwd)
+echo $cwd > "./marker.txt"
