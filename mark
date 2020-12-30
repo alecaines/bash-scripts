@@ -1,4 +1,4 @@
 #!/usr/bin/bash
 
 cwd=$(pwd)
-echo $cwd > "./marker.txt"
+echo $cwd > "./markers/marker.txt"

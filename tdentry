@@ -1,0 +1,10 @@
+#!/usr/bin/bash
+
+month=$(date +"%m")
+day=$(date +"%d")
+year=$(date +"%y")
+home=$HOME
+
+dentry="$home/Documents/diary/$month-$year/$month-$day-$year"
+
+cd $dentry

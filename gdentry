@@ -1,0 +1,35 @@
+#!/usr/bin/bash
+
+month=$(date +"%m")
+day=$(date +"%d")
+year=$(date +"%y")
+home=$HOME
+diary="$home/Documents/diary"
+wt="$home/Documents/bash-scripts/wordtemplate/wordtemplate.tex"
+dsty="$home/Documents/bash-scripts/wordtemplate/diary_style.sty"
+
+if [ ! -d $diary ]; then
+	mkdir $diary	
+fi
+
+cd $diary
+
+if [ ! -d "$diary/$month-$year" ]; then
+	mkdir "$diary/$month-$year"
+fi
+
+cd "$diary/$month-$year"
+
+if [ ! -d "$diary/$month-$year/$month-$day-$year" ]; then
+	mkdir "$diary/$month-$year/$month-$day-$year"
+fi
+
+cd "$diary/$month-$year/$month-$year-$day"
+cp $wt "$diary/$month-$year/$month-$day-$year/" 
+cp $dsty "$diary/$month-$year/$month-$day-$year/" 
+
+mv "$diary/$month-$year/$month-$day-$year/wordtemplate.tex" "$diary/$month-$year/$month-$day-$year/$month-$day-$year.tex"
+
+xelatex "$diary/$month-$year/$month-$day-$year/$month-$day-$year.tex"
+
+

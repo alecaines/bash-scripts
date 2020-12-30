@@ -1,0 +1,5 @@
+#!/usr/bin/bash
+
+home=$HOME
+
+cd "$home/Documents/bash-scripts"
