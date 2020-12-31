@@ -30,6 +30,6 @@ cp $dsty "$diary/$month-$year/$month-$day-$year/"
 
 mv "$diary/$month-$year/$month-$day-$year/wordtemplate.tex" "$diary/$month-$year/$month-$day-$year/$month-$day-$year.tex"
 
-xelatex "$diary/$month-$year/$month-$day-$year/$month-$day-$year.tex"
+#xelatex "$diary/$month-$year/$month-$day-$year/$month-$day-$year.tex"
 
 
